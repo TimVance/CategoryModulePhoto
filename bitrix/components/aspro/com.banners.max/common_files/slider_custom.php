@@ -430,7 +430,7 @@ $bHideOnNarrow = $arTheme['BIGBANNER_HIDEONNARROW']['VALUE'] === 'Y';?>
 																		<span class="btn <?=(strlen($arItem['PROPERTIES']['BUTTON_VIDEO_CLASS']['VALUE_XML_ID']) ? $arItem['PROPERTIES']['BUTTON_VIDEO_CLASS']['VALUE_XML_ID'] : 'btn-default')?> btn-video" title="<?=$buttonVideoText?>"></span>
 																	<?endif;?>
 																	<?if($bShowButton1):?>
-																		<a onclick="let banner = document.querySelector('.dropdown-menu.long-menu-items.BANNER'); banner.style.display = 'block'; banner.style.opacity = '1'; return false;" href="<?=$arItem["PROPERTIES"]["BUTTON1LINK"]["VALUE"]?>" class="<?=!empty($arItem["PROPERTIES"]["BUTTON1CLASS"]["VALUE"]) ? $arItem["PROPERTIES"]["BUTTON1CLASS"]["VALUE"] : "btn btn-default btn-lg"?>" <?=(strlen($target) ? 'target="'.$target.'"' : '')?>>
+																		<a onclick="let banner = document.querySelector('.mega_fixed_menu'); banner.style.display = 'block'; return false;" href="<?=$arItem["PROPERTIES"]["BUTTON1LINK"]["VALUE"]?>" class="<?=!empty($arItem["PROPERTIES"]["BUTTON1CLASS"]["VALUE"]) ? $arItem["PROPERTIES"]["BUTTON1CLASS"]["VALUE"] : "btn btn-default btn-lg"?>" <?=(strlen($target) ? 'target="'.$target.'"' : '')?>>
 																			<?=$arItem["PROPERTIES"]["BUTTON1TEXT"]["VALUE"]?>
 																		</a>
                                                                         <div class="smartsearch-field-main">
