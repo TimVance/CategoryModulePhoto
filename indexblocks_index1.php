@@ -23,7 +23,113 @@
 				<?endif;?>
 
 				<div class="drag-block grey container <?=$optionCode?> <?=$bBigBannersIndexClass?>" data-class="<?=$subtype?>_drag" data-order="<?=++$key;?>">
-					<?=CMax::ShowPageType('mainpage', $subtype, $strTemplateName);?>
+                    <div class="inner-banner-content">
+                        <div class="maxwidth-theme">
+                            <div class="inner-banner-content-inner">
+                                <a onclick="let banner = document.querySelector('.mega_fixed_menu'); banner.style.display = 'block'; return false;" href="<?=$arItem["PROPERTIES"]["BUTTON1LINK"]["VALUE"]?>" class="<?=!empty($arItem["PROPERTIES"]["BUTTON1CLASS"]["VALUE"]) ? $arItem["PROPERTIES"]["BUTTON1CLASS"]["VALUE"] : "btn btn-default btn-lg"?>" <?=(strlen($target) ? 'target="'.$target.'"' : '')?>>Каталог</a>
+                                <div class="smartsearch-field-main">
+                                    <style>
+                                        .smartsearch-field-main {
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                            margin-top: -10px;
+                                            max-width: 450px;
+                                            width: 100%;
+                                        }
+                                        .smartsearch-field-main .bx-searchtitle .bx-input-group .bx-form-control,
+                                        .smartsearch-field-main .bx-searchtitle .bx-input-group-btn button {
+                                            height: 41px;
+                                        }
+                                        .bx_searche {
+                                            background: #fff;
+                                        }
+                                        .title-search-result .top_big_one_banner {
+                                            display: none !important;
+                                        }
+                                        .main-slider__item .left .banner_title {
+                                            margin-top: -30px;
+                                        }
+                                        .inner-banner-content-inner {
+                                            position: absolute;
+                                            width: 100%;
+                                            z-index: 2;
+                                            margin-left: 90px;
+                                            bottom: 80px;
+                                        }
+                                        .inner-banner-content-inner .btn-lg {
+                                            padding: 12px 21px 11px !important;
+                                            height: 41px;
+                                            margin-right: 10px;
+                                        }
+                                        .inner-banner-content-inner .bx-input-group {
+                                            width: 90%;
+                                        }
+                                        @media screen and (max-width: 720px) {
+                                            .inner-banner-content-inner .bx-input-group {
+                                                width: 60%;
+                                            }
+                                        }
+                                        @media screen and (max-width: 980px) {
+                                            .inner-banner-content-inner .btn-lg {
+                                                display: none;
+                                            }
+                                            .inner-banner-content-inner {
+                                                margin-left: auto;
+                                                left: 50%;
+                                                transform: translateX(-30%);
+                                            }
+                                        }
+                                    </style>
+                                    <?$APPLICATION->IncludeComponent(
+                                        "arturgolubev:search.title",
+                                        ".default",
+                                        array(
+                                            "ANIMATE_HINTS" => array(
+                                                0 => "234234",
+                                                1 => "23423423423",
+                                                2 => "",
+                                            ),
+                                            "ANIMATE_HINTS_SPEED" => "1",
+                                            "CATEGORY_0" => array(
+                                                0 => "iblock_aspro_max_catalog",
+                                            ),
+                                            "CATEGORY_0_TITLE" => "",
+                                            "CHECK_DATES" => "N",
+                                            "CONTAINER_ID" => "smart-title-search",
+                                            "CONVERT_CURRENCY" => "N",
+                                            "FILTER_NAME" => "",
+                                            "INPUT_ID" => "smart-title-search-input",
+                                            "INPUT_PLACEHOLDER" => "",
+                                            "NUM_CATEGORIES" => "1",
+                                            "ORDER" => "rank",
+                                            "PAGE" => '',
+                                            "PRICE_CODE" => array(
+                                                0 => "BASE",
+                                            ),
+                                            "PRICE_VAT_INCLUDE" => "Y",
+                                            "SHOW_HISTORY" => "Y",
+                                            "SHOW_INPUT" => "Y",
+                                            "SHOW_LOADING_ANIMATE" => "Y",
+                                            "SHOW_PREVIEW" => "Y",
+                                            "SHOW_PREVIEW_TEXT" => "N",
+                                            "SHOW_PROPS" => array(
+                                            ),
+                                            "TOP_COUNT" => "5",
+                                            "USE_LANGUAGE_GUESS" => "Y",
+                                            "COMPONENT_TEMPLATE" => ".default",
+                                            "PREVIEW_WIDTH_NEW" => "34",
+                                            "PREVIEW_HEIGHT_NEW" => "34",
+                                            "CATEGORY_0_iblock_aspro_max_catalog" => array(
+                                                0 => "26",
+                                            )
+                                        ),
+                                        $component
+                                    );?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?=CMax::ShowPageType('mainpage', $subtype, $strTemplateName);?>
 				</div>
 
 				<?if($bIndexLongBigBanner):?>
