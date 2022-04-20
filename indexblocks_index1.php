@@ -85,11 +85,12 @@
                                         ".default",
                                         array(
                                             "ANIMATE_HINTS" => array(
-                                                0 => "234234",
-                                                1 => "23423423423",
-                                                2 => "",
+                                                0 => "Помпа дренажная Aspen mini",
+                                                1 => "Фреон 410а",
+                                                2 => "Кронштейн",
+												3 => "Медная труба",
                                             ),
-                                            "ANIMATE_HINTS_SPEED" => "1",
+                                            "ANIMATE_HINTS_SPEED" => "3",
                                             "CATEGORY_0" => array(
                                                 0 => "iblock_aspro_max_catalog",
                                             ),
@@ -102,12 +103,12 @@
                                             "INPUT_PLACEHOLDER" => "",
                                             "NUM_CATEGORIES" => "1",
                                             "ORDER" => "rank",
-                                            "PAGE" => '',
+                                            "PAGE" => CMax::GetFrontParametrValue("CATALOG_PAGE_URL"),
                                             "PRICE_CODE" => array(
                                                 0 => "BASE",
                                             ),
                                             "PRICE_VAT_INCLUDE" => "Y",
-                                            "SHOW_HISTORY" => "Y",
+                                            "SHOW_HISTORY" => "N",
                                             "SHOW_INPUT" => "Y",
                                             "SHOW_LOADING_ANIMATE" => "Y",
                                             "SHOW_PREVIEW" => "Y",

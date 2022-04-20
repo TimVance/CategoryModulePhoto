@@ -433,73 +433,7 @@ $bHideOnNarrow = $arTheme['BIGBANNER_HIDEONNARROW']['VALUE'] === 'Y';?>
                                                                 <a onclick="let banner = document.querySelector('.mega_fixed_menu'); banner.style.display = 'block'; return false;" href="<?=$arItem["PROPERTIES"]["BUTTON1LINK"]["VALUE"]?>" class="<?=!empty($arItem["PROPERTIES"]["BUTTON1CLASS"]["VALUE"]) ? $arItem["PROPERTIES"]["BUTTON1CLASS"]["VALUE"] : "btn btn-default btn-lg"?>" <?=(strlen($target) ? 'target="'.$target.'"' : '')?>>
                                                                     <?=$arItem["PROPERTIES"]["BUTTON1TEXT"]["VALUE"]?>
                                                                 </a>
-                                                                <div class="smartsearch-field-main">
-                                                                    <style>
-                                                                        .smartsearch-field-main {
-                                                                            display: inline-block;
-                                                                            vertical-align: middle;
-                                                                            margin-top: -10px;
-                                                                            max-width: 450px;
-                                                                            width: 100%;
-                                                                        }
-                                                                        .smartsearch-field-main .bx-searchtitle .bx-input-group .bx-form-control,
-                                                                        .smartsearch-field-main .bx-searchtitle .bx-input-group-btn button {
-                                                                            height: 41px;
-                                                                        }
-                                                                        .bx_searche {
-                                                                            background: #fff;
-                                                                        }
-                                                                        .title-search-result .top_big_one_banner {
-                                                                            display: none !important;
-                                                                        }
-                                                                    </style>
-                                                                    <?$APPLICATION->IncludeComponent(
-                                                                        "arturgolubev:search.title",
-                                                                        ".default",
-                                                                        array(
-                                                                            "ANIMATE_HINTS" => array(
-                                                                                0 => "234234",
-                                                                                1 => "23423423423",
-                                                                                2 => "",
-                                                                            ),
-                                                                            "ANIMATE_HINTS_SPEED" => "1",
-                                                                            "CATEGORY_0" => array(
-                                                                                0 => "iblock_aspro_max_catalog",
-                                                                            ),
-                                                                            "CATEGORY_0_TITLE" => "",
-                                                                            "CHECK_DATES" => "N",
-                                                                            "CONTAINER_ID" => "smart-title-search",
-                                                                            "CONVERT_CURRENCY" => "N",
-                                                                            "FILTER_NAME" => "",
-                                                                            "INPUT_ID" => "smart-title-search-input",
-                                                                            "INPUT_PLACEHOLDER" => "",
-                                                                            "NUM_CATEGORIES" => "1",
-                                                                            "ORDER" => "rank",
-                                                                            "PAGE" => '',
-                                                                            "PRICE_CODE" => array(
-                                                                                0 => "BASE",
-                                                                            ),
-                                                                            "PRICE_VAT_INCLUDE" => "Y",
-                                                                            "SHOW_HISTORY" => "Y",
-                                                                            "SHOW_INPUT" => "Y",
-                                                                            "SHOW_LOADING_ANIMATE" => "Y",
-                                                                            "SHOW_PREVIEW" => "Y",
-                                                                            "SHOW_PREVIEW_TEXT" => "N",
-                                                                            "SHOW_PROPS" => array(
-                                                                            ),
-                                                                            "TOP_COUNT" => "5",
-                                                                            "USE_LANGUAGE_GUESS" => "Y",
-                                                                            "COMPONENT_TEMPLATE" => ".default",
-                                                                            "PREVIEW_WIDTH_NEW" => "34",
-                                                                            "PREVIEW_HEIGHT_NEW" => "34",
-                                                                            "CATEGORY_0_iblock_aspro_max_catalog" => array(
-                                                                                0 => "26",
-                                                                            )
-                                                                        ),
-                                                                        $component
-                                                                    );?>
-                                                                </div>
-                                                            <?endif;?>
+                                                            <? endif; ?>
                                                             <?if($bShowButton2):?>
                                                                 <a href="<?=$arItem["PROPERTIES"]["BUTTON2LINK"]["VALUE"]?>" class="<?=!empty( $arItem["PROPERTIES"]["BUTTON2CLASS"]["VALUE"]) ? $arItem["PROPERTIES"]["BUTTON2CLASS"]["VALUE"] : "btn btn-transparent-border btn-lg"?>" <?=(strlen($target) ? 'target="'.$target.'"' : '')?>>
                                                                     <?=$arItem["PROPERTIES"]["BUTTON2TEXT"]["VALUE"]?>
