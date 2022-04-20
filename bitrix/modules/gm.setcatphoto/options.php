@@ -3,7 +3,6 @@
 use Bitrix\Main\Application;
 use Bitrix\Main\Config\Option;
 use Bitrix\Main\Localization\Loc;
-//use Bitrix\Main\Text\String;
 
 defined('ADMIN_MODULE_NAME') or define('ADMIN_MODULE_NAME', 'gm.setcatphoto');
 
@@ -26,28 +25,6 @@ $tabControl = new CAdminTabControl("tabControl", array(
     ),
 ));
 
-if ((!empty($save) || !empty($restore)) && $request->isPost() && check_bitrix_sessid()) {
-    if (!empty($restore)) {
-        Option::delete(ADMIN_MODULE_NAME);
-        CAdminMessage::showMessage(array(
-            "MESSAGE" => Loc::getMessage("REFERENCES_OPTIONS_RESTORED"),
-            "TYPE" => "OK",
-        ));
-    } elseif ($request->getPost('max_image_size') && ($request->getPost('max_image_size') > 0) && ($request->getPost('max_image_size') < 100000)) {
-        Option::set(
-            ADMIN_MODULE_NAME,
-            "max_image_size",
-            $request->getPost('max_image_size')
-        );
-        CAdminMessage::showMessage(array(
-            "MESSAGE" => Loc::getMessage("REFERENCES_OPTIONS_SAVED"),
-            "TYPE" => "OK",
-        ));
-    } else {
-        CAdminMessage::showMessage(Loc::getMessage("REFERENCES_INVALID_VALUE"));
-    }
-}
-
 $tabControl->begin();
 ?>
 
@@ -64,7 +41,7 @@ $tabControl->begin();
                    size="50"
                    maxlength="5"
                    name="max_image_size"
-                   value="<?=String::htmlEncode(Option::get(ADMIN_MODULE_NAME, "max_image_size", 500));?>"
+                   value=""
                    />
         </td>
     </tr>
