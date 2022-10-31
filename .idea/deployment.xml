@@ -13,7 +13,6 @@
             <excludedPath path="/auth" />
             <excludedPath path="/basket" />
             <excludedPath path="/blog" />
-            <excludedPath path="/catalog" />
             <excludedPath path="/company" />
             <excludedPath path="/contacts" />
             <excludedPath path="/desktop_app" />
